@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="home.html">New York</a>
+            </div>
+            <div class="hamburguer-menu">
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="home.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Tours</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Locations</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-clipped">
+            <div class="hero-textbox">
+                <h1 class="main-heading">New York</h1>
+                <h2 class="sub-heading">Learn about our awesome tourist attractions</h2>
+                <a href="#" class="cta-btn">Learn more</a>
+            </div>
+        </div>
+    </section>
+     
+    <script>
+        const mainNav = document.querySelector('.main-nav')
+
+        const hamburguerMenu = document.querySelector('.hamburguer-menu');
+
+        hamburguerMenu.addEventListener('click', function () {
+            mainNav.classList.toggle('open');
+            if('open'){
+                gsap.fromTo('.nav-item', { scaleX: 0 }, { duration: 1, scaleX: 1 });
+            }
+            else{
+            };
+        });
+
+        gsap.fromTo('.hero-clipped', { scaleX: 0 }, { duration: 1, scaleX: 1 });
+        gsap.fromTo('.logo', { X: 200, opacity:0 }, { duration: 4, X:1 ,opacity:1});
+        
+
+    </script>
+
+
+    
+
+
+
+
+</body>
+
+</html>
