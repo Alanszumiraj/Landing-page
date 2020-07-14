@@ -2,7 +2,6 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-
 }
 html{
     font-size: 10px;
@@ -11,14 +10,14 @@ html{
 }
 
 header{
-    width: 100%;;
+    min-width: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1000;
 }
 body{
-    overflow-y: hidden;
+    overflow:hidden
 }
 .main-nav{
     width: 100;
@@ -88,7 +87,7 @@ body{
     top: .8rem;
 }
 .open .bar{
-    /*background-color: transparent;*/
+    background-color: transparent;
     
 }
 .open .bar::before{
